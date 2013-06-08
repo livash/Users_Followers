@@ -1,0 +1,19 @@
+<h2>Welcome <%= @user.name.capitalize %></h2>
+<br>
+<h3>You are being followed by these users:</h3>
+<ul>
+	<% @followers.each do |follower| %>
+	<li><%= follower.name %></li>
+	<% end %>
+</ul>
+<br>
+<h3>The users you are following are:</h3>
+<ul>
+	<% @followed_users.each do |followed_user| %>
+	<li><%= followed_user.name %></li>
+	<% end %>
+</ul>
+<br>
+
+<%= button_to "Logout", sessions_url, :method => :delete %>
+

@@ -1,0 +1,13 @@
+<h1>Sign up form for Users nad Followers App</h1>
+<form action="<%= users_url %>" method="post">
+	<label for="user_name">Your name:</label>
+	<input type="text" id="user_name" name="user[name]" value="<%= @user.name %>">
+	<br>
+	<label for="user_username">Choose a user_name:</label>
+	<input type="text" id="user_username" name="user[username]" value="<%= @user.username %>">
+	<br>
+	<label for="user_password">Choose password</label>
+	<input type="password" id="user_password" name="user[password]">
+	<br>
+	<input type="submit" value="Submit">
+</form>
